@@ -22,13 +22,34 @@ const subheaderh2 = document.querySelector('.js-subHeader');
 // Selecting form submit button 
 const updateButton = document.querySelector('#createitem');
 
+// Selection Time P tag
+const timeDate = document.querySelector('.js-time');
+
+// Generates Date Object 
+const date = new Date();
+
+// Date formatting options
+let options = { 
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+};
+
+// formatted Date and Time using above options
+const timeStamp = new Intl.DateTimeFormat('en-US', options).format(date);
+
+
 
 intro();
 
 // example of function statement
 function intro() {
-  welcomeh1.innerText = "Please fill out info below";
+  timeDate.innerText = timeStamp;
+  welcomeh1.innerText = "Please enter your info below";
 }
+
+
 
 // example of function expression 
 const greeting = () => subheaderh2.innerText = `Hi ${nameInput.value} glad  you could be here`
