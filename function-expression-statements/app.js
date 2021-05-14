@@ -5,6 +5,8 @@
 /////////////////
 
 
+'use strict'
+
 
 // Targeting the main element tha will render our elements
 const mainDiv = document.querySelector("main") // returns the one main element in our html
@@ -40,7 +42,7 @@ let options = {
 const timeStamp = new Intl.DateTimeFormat('en-US', options).format(date);
 
 
-
+// the function Intro is hoisted above the call 
 intro();
 
 // example of function statement
@@ -53,6 +55,16 @@ function intro() {
 
 // example of function expression 
 const greeting = () => subheaderh2.innerText = `Hi ${nameInput.value} glad  you could be here`
+
+// Another function expression 
+// first class function - passing a function as a parameter
+// also knows and functional programming
+const goodDays = (a) => {
+  a()
+}
+goodDays(function() {
+  console.log('God and Motorcycles');
+}); 
 
 
 
