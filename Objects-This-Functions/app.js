@@ -8,7 +8,7 @@
 'use strict'
 
 
-const Manager = {
+var Manager = {
   name: "Sam",
   title: "Ui/Ux Dev Lead",
   description: "Lorem Ipsum",
@@ -18,17 +18,26 @@ const Manager = {
   }
 }
 
+Manager.sayHi();
+
 
 function Employee(name, role, company){
-  this.name = name,
-  this.role = role,
+  this.name = name;
+  this.role = role;
   this.company = company;
-  this.hi = function() {
-    console.log("hi " + this.name);
+  this.getFull = function() {
+    return "Hi " + this.name + " you are a great" + this.role;
   }
 }
 
 let Ian = new Employee("Ian Garnett", "Ui/Ux Dev", "Allianz" );
 
+let sayHi = () => {
+  console.log("hi " + this.name);
+}
 
+Ian.hi = sayHi;
+
+
+console.log(Ian.hi())
  
