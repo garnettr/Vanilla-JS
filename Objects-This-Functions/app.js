@@ -20,7 +20,6 @@ var Manager = {
 
 Manager.sayHi();
 
-
 function Employee(name, role, company){
   this.name = name;
   this.role = role;
@@ -29,15 +28,24 @@ function Employee(name, role, company){
     return "Hi " + this.name + " you are a great" + this.role;
   }
 }
+// Save Object to Ian
+var Ian = new Employee("Ian Garnett", "Ui/Ux Dev", "Allianz" );
 
-let Ian = new Employee("Ian Garnett", "Ui/Ux Dev", "Allianz" );
+// Get the full name of Employee
+console.log(Ian.getFull());
 
-let sayHi = () => {
-  console.log("hi " + this.name);
+
+// intro to event handlers using this 
+var randomImg = document.querySelector("IMG");
+
+
+// Setting up to return width of an image
+var EventHandler = function() {
+	console.log(this.width);
 }
+// OnClick Event to return width
+randomImg.onclick = EventHandler;
+  
 
-Ian.hi = sayHi;
 
-
-console.log(Ian.hi())
  
