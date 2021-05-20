@@ -7,7 +7,29 @@
 
 'use strict'
 
+//Object Methods
+var c = {
+  name: "the C object",
+  // start method
+  log: function() {
+    // define this to the objects lexical environment using this
+    var self = this;
+    self.name = 'Updated C Object';
+    // logging self to see name output
+    console.log(self);
+    // defining a expression, with pram to update .name 
+    var setName = function(newname) {
+      self.name = newname;
+    }
+    setName('update it again - the C object');
+    // logging to see the updated .name value
+    console.log(self);
+  }
+}
+// initiating C expression 
+c.log();
 
+// creating object literal with method
 var Manager = {
   name: "Sam",
   title: "Ui/Ux Dev Lead",
@@ -17,8 +39,9 @@ var Manager = {
     return console.log("hi " + this.name);
   }
 }
-
+// initiating sayHi method
 Manager.sayHi();
+
 
 function Employee(name, role, company){
   this.name = name;
@@ -28,6 +51,7 @@ function Employee(name, role, company){
     return "Hi " + this.name + " you are a great" + this.role;
   }
 }
+
 // Save Object to Ian
 var Ian = new Employee("Ian Garnett", "Ui/Ux Dev", "Allianz" );
 
@@ -45,6 +69,8 @@ var EventHandler = function() {
 }
 // OnClick Event to return width
 randomImg.onclick = EventHandler;
+
+
   
 
 
