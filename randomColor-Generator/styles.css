@@ -1,4 +1,4 @@
-/*
+ /*
 =============== 
 Fonts
 ===============
@@ -199,6 +199,16 @@ main {
   display: grid;
   place-items: center;
 }
+.wrapper {
+  display: flex;
+}
+.btn-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 22rem;
+  margin: auto;
+}
 .container {
   text-align: center;
 }
@@ -207,12 +217,48 @@ main {
   color: var(--clr-white);
   padding: 1rem;
   border-radius: var(--radius);
-  margin-bottom: 2.5rem;
+  margin-bottom: 0;
 }
+.container input {
+  background: var(--clr-black);
+  color: var(--clr-white);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 0;
+  margin-left: -1em;
+  border: 0;
+  font-size: .95rem;
+}
+.container h3 {
+  background: var(--clr-white);
+  color: var(--clr-black);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 0;
+}
+
+.container input {
+  background: var(--clr-black);
+  color: var(--clr-white);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 0;
+  margin-left: -1em;
+  border: 0;
+}
+
+.bottom-container input {
+  background: white;
+  color: black;
+}
+
+
 .color {
   color: var(--clr-primary-5);
 }
 .btn-hero {
+  width: 100%;
+  margin-bottom: 1rem;
   font-family: var(--ff-primary);
   text-transform: uppercase;
   background: transparent;
@@ -231,4 +277,9 @@ main {
 .btn-hero:hover {
   color: var(--clr-white);
   background: var(--clr-black);
+}
+
+.btn-minor {
+  width: 40%;
+  margin-bottom: 0;
 }

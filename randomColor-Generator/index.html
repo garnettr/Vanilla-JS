@@ -25,13 +25,23 @@
 
     <main>
       <div class="container">
-        <h2>RGB Background color : <span class="color js-rbgColor">
-        </span></h2>
+        <class class="wrapper">
+          <h2>RGB Background color : </h2>
+          <input type="text" class="color js-rbgColor">
+        </class>
+        </div>
 
-        <h3>Hex Background color : <span class="color js-hexColor">
-          
-        </span></h3>
-        <button class="btn btn-hero" id="btn">Click Me</button>
+        <div class="wrapper container bottom-container">
+          <h3>Hex Background color :</h3>
+          <input type="text" class="color js-hexColor">
+        </div>
+        
+        <div class="btn-wrapper">
+          <button class="btn btn-hero" id="btn">Generate Random Color</button>
+          <button data-copyblob=".js-rbgColor" data-done="image copied" class="btn-rgb btn-hero btn-minor">Copy RGB</button>
+          <button class="btn-hex btn-hero btn-minor">Copy HEX</button>
+        </div>
+
       </div>
     </main>
     <!-- javascript -->
