@@ -1,0 +1,24 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Creepster&family=Grand+Hotel&family=Pacifico&family=Press+Start+2P&family=Reenie+Beanie&display=swap');
+
+
+// font-family: 'Bungee Shade', cursive;
+// font-family: 'Creepster', cursive;
+// font-family: 'Grand Hotel', cursive;
+// font-family: 'Pacifico', cursive;
+// font-family: 'Press Start 2P', cursive;
+// font-family: 'Reenie Beanie', cursive;
+
+
+body {
+  font-family: 'Bungee Shade', cursive;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+
+  section {
+    width: 50%;
+  }
+}
