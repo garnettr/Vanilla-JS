@@ -1,0 +1,102 @@
+<html>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./css/styles.css">
+      <title>Profile Builder</title>
+    </head>
+    <body>
+      <h2>Profile Builder</h2>
+      <main>
+        <section>
+          <form onsubmit="return false">
+            <div>
+              <label for="fname">First name:</label><br>
+              <input type="text" id="fname" name="fname"><br>
+              <label for="lname">Last name:</label><br>
+              <input type="text" id="lname" name="lname"><br><br>
+              <select name="sex" id="person-sex">
+                <option value="">--Please choose an option--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+  
+  
+          <div>
+            <h4>Favorite Hobbies:</h4>
+              <label for="hobby1">Hobby 1:</label><br> 
+              <input type="text" class="hobby1" name="hobby1"><br>
+              <label for="hobby1">Hobby 2:</label><br> 
+              <input type="text" class="hobby2" name="hobby2"><br>
+            </div>
+  
+            <div>
+              <h4>Occupation:</h4>
+                <label for="jobTitle">Job Title:</label><br> 
+                <input type="text" class="jobTitle" name="jobTitle">
+              </div>
+  
+            
+              <div>
+  
+              <H4>Pets info:</H4>
+              <label for="petName">Pets Name:</label><br> 
+              <input type="text" class="petName" name="petName"><br> 
+            </div>
+  
+            <div>
+              <H4>Favorite Color</H4>
+              <label for="color1">Color1:</label><br> 
+              <select name="color" class="color1">
+                <option value="">--Choose Your Fav Color--</option>
+                <option value="blue">Blue</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="black">Black</option>
+              </select>
+            </div>
+
+            <div>
+              <H4>Pick a Number</H4>
+              <select name="numbers" class="numbers">
+                <option value="">--Pick A Number--</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+              </select>
+            </div>
+    
+            <input type="submit" value="Submit" onclick="createProfile()">
+  
+  
+  
+  
+          </form> 
+        </section>
+
+        <section>
+          <div class="profileInfo-container">
+            <img class="profile-image" src="https://source.unsplash.com/random" alt="random male/female image" style="width:150px;height:150px;border-radius: 50%; object-position: 50% 100%;">
+          </div>
+          <div class="hobbies-container">
+
+          </div>
+          <div class="occupation-container">
+
+          </div>
+          <div class="petInfo-container">
+
+          </div>
+          <div class="favoriteColor-container">
+
+          </div>
+
+        </section>
+
+      </main>
+
+        <script src="app.js"></script>
+    </body>
+</html>
