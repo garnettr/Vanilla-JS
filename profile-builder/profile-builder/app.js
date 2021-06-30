@@ -6,12 +6,10 @@
 const profileContainer = document.querySelector('.profileInfo-container');
 // image
 let profileImage = document.querySelector('.profile-image');
-
 // Form Inputs
 const form = document.querySelector("form");
 const inputFirstNme = document.querySelector('#fname');
 const inputLastNme = document.querySelector('#lname');
-const personSex = document.querySelector('#person-sex');
 // Hobbies 
 const hobby1 = document.querySelector('.hobby1');
 const hobby2 = document.querySelector('.hobby2');
@@ -23,6 +21,8 @@ const petName = document.querySelector('.petName');
 // Colors
 const color1 = document.querySelector('.color1');
 const color2 = document.querySelector('.color2');
+// Pick a Number 
+const favNumber = document.querySelector('.numbers');
 
 
 
@@ -30,21 +30,20 @@ const color2 = document.querySelector('.color2');
 function Person() {
   this.firstName = inputFirstNme.value;
   this.lastName = inputLastNme.value;
+
   this.hobby1 = hobby1.value;
   this.hobby2 = hobby2.value;
+
+  this.jobTitle = jobTitle.value;
+
+  this.favColor1 = color1.value;
+
+  this.favNumber = favNumber.value;
+
+  this.petName = petName.value;
+
   this.firstInitial = this.firstName[0];
   this.secondInitial = this.lastName[0];
-}
-
-// create Initials & print on page
-// what we need to assign to all elements created
-// Size
-// Positioning
-// Color
-function StyleElement(color) {
-
-  Person.call(this);
-  this.color = color;
 
   this.applyStyles = function(element, text) {
     var elementToPage = element;
@@ -53,8 +52,46 @@ function StyleElement(color) {
     elementToPage.style.fontSize = randomNumber(12, 22);
     elementToPage.style.transform = `translate(${randomNumber(12, 22)}px, ${randomNumber(12, 22)}px)`;
 
-    return console.log(element);
+    return element;
   }
+}
+
+// create Initials & print on page
+// what we need to assign to all elements created
+// Size
+// Positioning
+// Color
+function StyleElement() {
+
+  Person.call(this);
+
+
+  let initial1 = this.applyStyles(document.createElement('h1'), ['firstInitial']);
+  let initial2 = this.applyStyles(document.createElement('h1'), ['secondInitial']);
+
+  let hobbyToPage1 = this.applyStyles(document.createElement('p'), ['hobby1']);
+  let hobbyToPage2 = this.applyStyles(document.createElement('p'), ['hobby2']);
+
+
+  let jobToPage = this.applyStyles(document.createElement('h4'), ['jobTitle']);
+
+  let petToPage = this.applyStyles(document.createElement('p'), ['petName']);
+
+  let numberToPage = this.applyStyles(document.createElement('h3'), ['favNumber']);
+
+
+  console.log(initial1);
+  console.log(initial2);
+
+  console.log(hobbyToPage1);
+  console.log(hobbyToPage2);
+
+
+  console.log(jobToPage);
+
+  console.log(numberToPage);
+
+  console.log(petToPage);
 }
 
 
@@ -75,13 +112,10 @@ function createProfile() {
   This will allow the 'this.getFullName()' to run
   Bind creates a copy of LogName
   */
-  let generateStyle = new StyleElement(color1.value);
+  let generateStyle = new StyleElement();
 
-  console.log(generateStyle)
+  generateStyle();
   
-  generateStyle.applyStyles(document.createElement('h1'), 'firstInitial');
-  generateStyle.applyStyles(document.createElement('h2'), 'secondInitial');
-
 };
 
 
