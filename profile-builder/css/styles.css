@@ -15,6 +15,23 @@
   margin: 0;
 }
 
+h1 {
+  background: white;
+  padding: 1em;
+  z-index: 4;
+}
+
+h2 {
+  background: peachpuff;
+  padding: 1em;
+}
+
+p {
+  background: purple;
+  color: white;
+  z-index: 2;
+}
+
 body {
   font-family: 'Bungee Shade', cursive;
 }

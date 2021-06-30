@@ -51,9 +51,8 @@ function Person() {
     elementToPage.innerText = this[text];
     elementToPage.style.fontSize = `${randomNumber(4, 9)}em`;
     elementToPage.style.position = "absolute";
-    elementToPage.style.opacity = `${randomNumber(40, 100)}%`;
-    elementToPage.style.top = `${randomNumber(1, 3)}em`;
-    elementToPage.style.left = `${randomNumber(2, 3)}em`;
+    elementToPage.style.top = `${randomNumber(2, 60)}%`;
+    elementToPage.style.left = `${randomNumber(2, 60)}%`;
     
     return profileContainer.append(element);
   }
