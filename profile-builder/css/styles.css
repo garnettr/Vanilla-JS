@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Creepster&family=Grand+Hotel&family=Pacifico&family=Press+Start+2P&family=Reenie+Beanie&display=swap");
+.profileInfo-container {
+  position: relative;
+  height: 100vh;
+  max-height: 1500px;
+  width: 100vw;
+  background: paleturquoise;
+}
+
+.profileInfo-container h1,
+.profileInfo-container h2,
+.profileInfo-container h3,
+.profileInfo-container h4,
+.profileInfo-container h5 {
+  margin: 0;
+}
+
 body {
   font-family: 'Bungee Shade', cursive;
 }
@@ -7,9 +23,10 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main section {

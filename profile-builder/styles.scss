@@ -10,13 +10,35 @@
 // font-family: 'Reenie Beanie', cursive;
 
 
+
+.profileInfo-container {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5
+  {
+    margin: 0;
+  }
+
+  position: relative;
+  height: 100vh;
+  max-height: 1500px;
+  width: 100vw;
+  background: paleturquoise;
+}
+
+
+
+
+
 body {
   font-family: 'Bungee Shade', cursive;
 }
 
 main {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 
   section {
     width: 50%;
