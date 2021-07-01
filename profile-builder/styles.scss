@@ -20,7 +20,8 @@
   {
     margin: 0;
   }
-
+  
+  overflow: hidden;
   position: relative;
   height: 100vh;
   max-height: 1500px;
@@ -28,11 +29,21 @@
   background: paleturquoise;
 }
 
-
+// H1 Styles 
 h1 {
-  background: white;
-  padding: 1em;
+  position: relative;
   z-index: 4;
+  &:before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 1em;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background: white;
+  }
 }
 
 h2 {
@@ -40,10 +51,20 @@ h2 {
   padding: 1em;
 }
 
-p {
-  background: purple;
+h5 {
+  font-family: 'Pacifico', cursive;
   color: white;
-  z-index: 2;
+}
+
+h6 {
+  font-family: 'Reenie Beanie', cursive;
+  color: white;
+}
+
+
+p {
+  opacity: .5;
+  font-family: 'Press Start 2P', cursive;
 }
 
 
@@ -58,8 +79,10 @@ body {
 main {
   display: flex;
   flex-direction: column;
+}
 
-  section {
-    width: 50%;
-  }
+form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
