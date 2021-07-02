@@ -45,7 +45,8 @@ function Person() {
   this.firstInitial = this.firstName[0];
   this.secondInitial = this.lastName[0];
 
-  this.applyStyles = function(element, text, fontSize) {
+  this.applyStyles = function(element, text, fontSize, rotation) {
+    this.rotation ? rotation : 0;
     var elementToPage = element;
 
     elementToPage.innerText = this[text];
@@ -53,6 +54,8 @@ function Person() {
     elementToPage.style.position = "absolute";
     elementToPage.style.top = `${randomNumber(-2, 80)}%`;
     elementToPage.style.left = `${randomNumber(2, 60)}%`;
+    elementToPage.style.transform = `rotate(${rotation}deg)`;
+
     
     return profileContainer.append(element);
   }
@@ -82,11 +85,18 @@ function StyleElement() {
   this.cloneElements = function() {
     for (let i = 0; i < 3; i++) {
      this.applyStyles(document.createElement('h4'), ['firstName'], `${randomNumber(5, 12)}em`);
-     this.applyStyles(document.createElement('p'), ['hobby1'], `${randomNumber(2, 3)}em`);
+     this.applyStyles(document.createElement('p'), ['hobby1'], `${randomNumber(2, 3)}em`, `${randomNumber(-90, 90)}em`);
      this.applyStyles(document.createElement('p'), ['hobby2'], `${randomNumber(1, 4)}em`);
+     this.applyStyles(document.createElement('h5'), ['favColor1'], `${randomNumber(5, 12)}em`);
      this.applyStyles(document.createElement('h6'), ['petName'], `${randomNumber(3, 6)}em`)
     }
   }
+  // this.cloneElementsv2 = function() {
+  //   for (let i = 0; i < 2; i++) {
+  //     this.applyStyles(document.createElement('h1'), ['firstInitial'], `${randomNumber(5, 12)}em`);
+  //     this.applyStyles(document.createElement('h1'), ['secondInitial'], `${randomNumber(5, 12)}em`);
+  //   }
+  // }
 }
 
 

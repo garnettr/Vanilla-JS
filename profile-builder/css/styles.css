@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Creepster&family=Grand+Hotel&family=Pacifico&family=Press+Start+2P&family=Reenie+Beanie&display=swap");
+.profile-containerWrapper {
+  padding: 5em;
+}
+
 .profileInfo-container {
   overflow: hidden;
   position: relative;
-  height: 100vh;
-  max-height: 1500px;
-  width: 100vw;
+  height: 90vh;
+  width: 100%;
   background: paleturquoise;
 }
 
@@ -14,6 +17,14 @@
 .profileInfo-container h4,
 .profileInfo-container h5 {
   margin: 0;
+}
+
+.profileInfo-container:before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
 }
 
 h1 {
@@ -75,5 +86,12 @@ form {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 /*# sourceMappingURL=styles.css.map */
