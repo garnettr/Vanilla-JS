@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Creepster&family=Grand+Hotel&family=Pacifico&family=Press+Start+2P&family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Pacifico&family=Press+Start+2P&family=Reenie+Beanie&family=Roboto+Condensed&display=swap');
 
 
 // font-family: 'Bungee Shade', cursive;
@@ -10,39 +10,11 @@
 // font-family: 'Reenie Beanie', cursive;
 
 
-.profile-containerWrapper {
-  padding: 5em;
-}
-
-.profileInfo-container {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5
-  {
-    margin: 0;
-  }
-  
-  overflow: hidden;
-  position: relative;
-  height: 90vh;
-  width: 100%;
-  background: paleturquoise;
-
-  &:before {
-    content: " ";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 2px solid white;
-  }
-}
-
-// H1 Styles 
 h1 {
+  margin: 0;
   position: relative;
   z-index: 4;
+  font-family: 'Bungee Shade', cursive;
   &:before {
     content: " ";
     position: absolute;
@@ -57,33 +29,38 @@ h1 {
 }
 
 h2 {
-  background: peachpuff;
   padding: 1em;
+  margin: 0;
+}
+
+h4 {
+  font-family: 'Bungee Shade', cursive;
+  margin: 0;
 }
 
 h5 {
   font-family: 'Pacifico', cursive;
   color: white;
+  margin: 0;
 }
 
 h6 {
   font-family: 'Reenie Beanie', cursive;
   color: white;
+  margin: 0;
 }
-
 
 p {
   opacity: .5;
   font-family: 'Press Start 2P', cursive;
 }
 
-
-
-
-
-
 body {
-  font-family: 'Bungee Shade', cursive;
+  font-size: 1.25em;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  // line-height: 1.5;
+  color: #182750;
 }
 
 main {
@@ -92,10 +69,177 @@ main {
 }
 
 form {
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
   margin: auto;
-  justify-content: center;
-  align-items: baseline;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+
+  input {
+    border: 0;
+    border-radius: .125em;
+    padding: .5em;
+    width: 63%;
+  }
+
+  select {
+    border: 0;
+  }
+
+  span {
+    width: 100%;
+    max-width: 20em;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .75em;
+    
+  }
+
+  @media only screen and (min-width: 600px) {
+    width: 50%;
+    align-items: flex-start;
+    margin: initial;
+    margin-left: auto;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 40%;
+  }
 }
+
+button {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1em;
+  background: none;
+  border: 2px solid #182750;
+  color: #182750;
+  border-radius: 1.6em;
+  font-weight: 600;
+  padding: .25em 1em;
+}
+
+.form-wrapper {
+  padding: 5%;
+  background: #f9de68;
+}
+
+
+.profile-containerWrapper {
+  padding: 5em;
+}
+
+.profileInfo-container {
+
+  overflow: hidden;
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  background: paleturquoise;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+  }
+
+  // H1 Styles 
+}
+
+
+
+.firstName-Container { grid-area: firstName;}
+.petName-Container { grid-area: petName;}
+.colorContainer { grid-area: favColor;}
+.favNumber-Container { grid-area: favNumber;}
+.caption {grid-area: caption;}
+.lastName-Container {grid-area: lastName}
+.hobby1-Container {grid-area: hobby1}
+.hobby2-Container {grid-area: hobby2}
+.jobTitle-Container {grid-area: jobTitle}
+
+.grid-container {
+  margin: 2% 1% 0 1%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: .25rem;
+  grid-template-rows: repeat(5, 18rem);
+  grid-row-gap: .25rem;
+  grid-template-areas:
+    "firstName hobby2 hobby2"
+    "firstName caption lastName"
+    "firstName favColor lastName"
+    "hobby1 hobby1 favNumber"
+    "jobTitle petName petName"
+}
+
+.firstName-Container, 
+.lastName-Container, 
+.hobby2-Container, 
+.hobby1-Container,
+.jobTitle-Container,
+.petName-Container,
+.colorContainer,
+.favNumber-Container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ef6565;
+  overflow: hidden;
+}
+
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+}
+
+.caption {
+  border: 1px dotted red;
+  padding: 10%;
+}
+.jobTitle-Container {
+  width: 100%;
+  height: 100%;
+  background: #ef6565;
+}
+.lastName-Container {
+ background: #82f5c2;
+}
+.petName-Container {
+  background: #82f5c2;
+}
+.hobby2-Container {
+ background: #82f5c2;
+}
+.hobby1-Container {
+ background: #82f5c2;
+}
+div {
+ border-radius: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+   .grid-container {
+      grid-template-columns: 40% 60%;
+      grid-column-gap: 5px;
+      grid-template-areas: 
+          "petName caption" 
+          "lastName hobby2"
+          "favColor hobby1"
+          "jobTitle favNumber"
+          "firstName firstName";
+     }
+}
+
+
+
+
+
