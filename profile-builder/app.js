@@ -49,11 +49,11 @@ function Person() {
   this.firstInitial = this.firstName[0];
   this.secondInitial = this.lastName[0];
 
-  this.applyStyles = function(element, text, fontSize) {
+  this.applyStyles = function(element, text) {
     var elementToPage = element;
 
     elementToPage.innerText = this[text];
-    elementToPage.style.fontSize = fontSize;
+    // elementToPage.style.fontSize = fontSize;
     // elementToPage.style.position = "absolute";
     // elementToPage.style.top = `${randomNumber(-2, 80)}%`;
     // elementToPage.style.left = `${randomNumber(2, 60)}%`;
@@ -74,13 +74,13 @@ function StyleElement() {
   Person.call(this);
 
 
-  this.firstInitialStyle = this.applyStyles(document.createElement('h1'), ['firstInitial'], `${randomNumber(5, 12)}em`);
-  this.lastInitialStyle = this.applyStyles(document.createElement('h1'), ['secondInitial'], `${randomNumber(5, 12)}em`);
-  this.hobby1Style = this.applyStyles(document.createElement('p'), ['hobby1'], `${randomNumber(5, 12)}em`);
+  this.firstInitialStyle = this.applyStyles(document.createElement('h1'), ['firstInitial']);
+  this.lastInitialStyle = this.applyStyles(document.createElement('h1'), ['secondInitial']);
+  this.hobby1Style = this.applyStyles(document.createElement('p'), ['hobby1']);
   this.hobby2Style = this.applyStyles(document.createElement('p'), ['hobby2']);
-  this.jobStyle = this.applyStyles(document.createElement('h5'), ['jobTitle'], `${randomNumber(3, 6)}em`);
-  this.favColorStyle = this.applyStyles(document.createElement('h5'), ['favColor'], `${randomNumber(5, 12)}em`);
-  this.petNameStyle = this.applyStyles(document.createElement('p'), ['petName'], `${randomNumber(5, 12)}em`);
+  this.jobStyle = this.applyStyles(document.createElement('h5'), ['jobTitle']);
+  this.favColorStyle = this.applyStyles(document.createElement('h5'), ['favColor']);
+  this.petNameStyle = this.applyStyles(document.createElement('p'), ['petName']);
   this.favNumStyle = this.applyStyles(document.createElement('h3'), ['favNumber']);
 
   this.printToPage = function(element, parentContainer) {
@@ -92,7 +92,7 @@ function StyleElement() {
       element[i];
     }
   }
-  
+
 }
 
 function randomNumber(min, max) {
