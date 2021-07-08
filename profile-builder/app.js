@@ -74,12 +74,12 @@ function StyleElement() {
   Person.call(this);
 
 
-  this.firstInitialStyle = this.applyStyles(document.createElement('h1'), ['firstInitial']);
-  this.lastInitialStyle = this.applyStyles(document.createElement('h1'), ['secondInitial']);
+  this.firstInitialStyle = this.applyStyles(document.createElement('p'), ['firstInitial']);
+  this.lastInitialStyle = this.applyStyles(document.createElement('p'), ['secondInitial']);
   this.hobby1Style = this.applyStyles(document.createElement('p'), ['hobby1']);
   this.hobby2Style = this.applyStyles(document.createElement('p'), ['hobby2']);
-  this.jobStyle = this.applyStyles(document.createElement('h5'), ['jobTitle']);
-  this.favColorStyle = this.applyStyles(document.createElement('h5'), ['favColor']);
+  this.jobStyle = this.applyStyles(document.createElement('p'), ['jobTitle']);
+  this.favColorStyle = this.applyStyles(document.createElement('p'), ['favColor']);
   this.petNameStyle = this.applyStyles(document.createElement('p'), ['petName']);
   this.favNumStyle = this.applyStyles(document.createElement('h3'), ['favNumber']);
 
