@@ -1,26 +1,4 @@
 @import url("https://use.typekit.net/exx2gkw.css");
-h1 {
-  margin: 0;
-  position: relative;
-  z-index: 4;
-  font-family: bungee, sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-h1:before {
-  content: " ";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 1em;
-  border-radius: 50%;
-  z-index: -1;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background: white;
-}
-
 p {
   font-family: flood-std, sans-serif;
   font-weight: 400;
@@ -47,13 +25,14 @@ main {
 
 button {
   font-family: stolzl, sans-serif;
-  font-size: 1em;
+  font-size: 1.1em;
   background: none;
   border: 2px solid #182750;
   color: #182750;
   border-radius: 1.6em;
   font-weight: 600;
   padding: .25em 1em;
+  margin-top: 1em;
 }
 
 button:hover, button:focus {
@@ -61,14 +40,40 @@ button:hover, button:focus {
   border: 2px solid #ffffff;
 }
 
+.header {
+  padding: .5em;
+  margin-bottom: 0;
+  font-size: 1.5em;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 1em;
+    font-size: 2.5em;
+  }
+}
+
 .form-wrapper {
-  padding: 5%;
+  padding: 5% 7%;
   background: #f9de68;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9de68), color-stop(60%, #f9de68), to(white));
+  background: linear-gradient(180deg, #f9de68 0%, #f9de68 60%, white 100%);
+}
+
+.form-wrapper p {
+  padding-bottom: 5%;
+  border-bottom: 2px dotted #b39f4c;
+  margin-bottom: 7%;
+}
+
+.form-wrapper h2 {
+  font-size: 1.25em;
 }
 
 .form-wrapper form {
+  font-size: .85em;
   width: 100%;
-  margin: auto;
+  margin: 2% auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,43 +88,80 @@ button:hover, button:focus {
           align-items: center;
 }
 
-.form-wrapper form input {
-  border: 0;
-  border-radius: .125em;
-  padding: .5em;
-  width: 63%;
-}
-
-.form-wrapper form select {
-  border: 0;
-}
-
 .form-wrapper form span {
   width: 100%;
-  max-width: 20em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: .75em;
 }
 
-@media only screen and (min-width: 600px) {
-  .form-wrapper form {
-    width: 50%;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin: initial;
-    margin-left: auto;
+.form-wrapper form span input, .form-wrapper form span select {
+  border: 0;
+  margin-top: .65em;
+  border-radius: .125em;
+  padding: .65em;
+  width: 100%;
+}
+
+@media only screen and (min-width: 636px) {
+  .form-wrapper form span {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .form-wrapper form span input, .form-wrapper form span select {
+    margin-top: 0;
+    border: 0;
+    border-radius: .125em;
+    width: 63%;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .form-wrapper form {
+    width: 50%;
+    max-width: 36em;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: initial;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .form-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .form-wrapper h2 {
+    width: 100%;
+    font-size: 1.5em;
+  }
+  .form-wrapper p {
     width: 40%;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .form-wrapper {
+    padding: 5% 10%;
   }
 }
 
@@ -130,8 +172,8 @@ button:hover, button:focus {
   transition: padding 1s, grid-template-columns 1s, grid-template-rows 1s, -ms-grid-columns 1s, -ms-grid-rows 1s;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
   grid-column-gap: 5px;
   -ms-grid-rows: (25vh)[6];
       grid-template-rows: repeat(6, 25vh);
