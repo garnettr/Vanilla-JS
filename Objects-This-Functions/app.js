@@ -71,7 +71,49 @@ var EventHandler = function() {
 randomImg.onclick = EventHandler;
 
 
-  
 
+// ===================
+/* Objects - Assigning with Dots */
+// An Array is an special kind of object
+
+var person = []
+
+person.name = "Mrs. White";
+
+var who = person.name;
+
+person[0] = "I was not in the Billiards room";
+
+person["plea"] = "I would never";
+
+console.log(person);
+
+
+// -------------------------------
+
+var box = {};
+
+box['material'] = "cardBoard";
+box[0] = 'Meow';
+box['^&*'] = "Testing 123";
+
+var test = box['^&*'];
+
+
+console.log(test);
+
+
+
+// Looping through an Object to access Values 
+
+var triangle = {a: 1, b: 2, c: 3};
+// start the loop of key's and values
+for (const property in triangle) {
+  console.log(`${property}: ${triangle[property]}`);
+}
+// start the loop of only values
+for (const property in triangle) {
+  console.log(`${triangle[property]}`);
+}
 
  
