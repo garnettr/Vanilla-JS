@@ -3,12 +3,12 @@
 
 #### Goal of this repo: practice JS daily
 
-Since I do not write JS daily at work, I practice JS before and or after work hours (daily) (9-5)
+Since I don't write JS daily at work (for now ;)), I practice JS before and or after work hours (daily) (9-5)
 
 So this repo is a growing list of of my Vanilla Javascript notes and snippets of code examples. 
 
 These examples are all apart of my JS journey, as I continue to grow and learn either through 
-articles or online courses I will continue to build mini projects and document my journey.
+articles or online courses, I will continue to build mini projects and document my journey.
 
 ---- 
 
